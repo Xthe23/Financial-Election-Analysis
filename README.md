@@ -4,7 +4,7 @@ This repository contains Python scripts that analyze financial data (budget_data
 ## Table of Contents
 
 - [PyBank Financial Analysis](#pybank-financial-analysis)
-- [PyPoll Election Results](#pypoll-election-results)
+- [PyPoll Election Results](#pypoll-election-analysis)
 - [Running the Scripts](#running-the-scripts)
 
 - ## PyBank Financial Analysis
