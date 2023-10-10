@@ -17,6 +17,18 @@ The `budget_analysis.py` script analyzes the financial records of a company. Giv
 - Greatest increase in profits (date and amount)
 - Greatest decrease in losses (date and amount)
 
+Results:
+
+```
+Financial Analysis
+------------------
+Total Months: 86
+Total: $22564198
+Average Change: $-8311.11
+Greatest Increase in Profits: Aug-16 ($1862002)
+Greatest Decrease in Profits: Feb-14 ($-1825558)
+```
+
 Below is a snippet of the `budget_analysis.py` file used in this project. For the complete code, please [click here](https://github.com/Xthe23/python-challenge/blob/main/PyBank/budget_analysis.py).
 
 ```python
@@ -35,7 +47,7 @@ if not os.path.exists("Analysis"):
 
 ---
 
-## PyPoll Election Results
+## PyPoll Election Analysis
 ![Election Analysis Image](https://github.com/Xthe23/python-challenge/blob/main/Images/Vote_counting.png)
 The `election_analysis.py` script assists a small, rural town in modernizing its vote-counting process. Given a dataset with voter IDs, county, and candidate names, the script calculates:
 
@@ -44,6 +56,22 @@ The `election_analysis.py` script assists a small, rural town in modernizing its
 - Percentage of votes each candidate won
 - Total number of votes each candidate won
 - Winner of the election based on the popular vote
+
+Results:
+
+```
+-------------------------
+Total Votes: 369711
+-------------------------
+Charles Casper Stockham: 23.049% (85213)
+Diana DeGette: 73.812% (272892)
+Raymon Anthony Doane: 3.139% (11606)
+-------------------------
+Winner: Diana DeGette
+-------------------------
+```
+
+
 
 Below is a snippet of the `election_analysis.py` file used in this project. For the complete code, please [click here](https://github.com/Xthe23/python-challenge/blob/main/PyPoll/election_analysis.py).
 
