@@ -1,7 +1,16 @@
 import csv
+import os
+
+# File paths
+input_file = "Resources/budget_data.csv"
+output_file = "Analysis/financial_analysis_output.txt"
+
+# Create the directory if it doesn't exist
+if not os.path.exists("Analysis"):
+    os.makedirs("Analysis")
 
 # Open the CSV file
-with open("Resources/budget_data.csv") as csvfile:
+with open(input_file, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
 
     # Initialize variables
@@ -55,7 +64,7 @@ with open("Resources/budget_data.csv") as csvfile:
     print(
         f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})")
     # Export the analysis to a text file
-    with open("financial_analysis.txt", "w") as textfile:
+    with open(output_file, "w") as textfile:
         textfile.write("Financial Analysis\n")
         textfile.write("------------------\n")
         textfile.write(f"Total Months: {total_months}\n")
