@@ -8,7 +8,7 @@ This repository contains Python scripts that analyze financial data (budget_data
 - [Running the Scripts](#running-the-scripts)
 
 - ## PyBank Financial Analysis
-
+![Financial Analysis Image](https://github.com/Xthe23/python-challenge/blob/main/Images/revenue-per-lead.png)
 The `budget_analysis.py` script analyzes the financial records of a company. Given a dataset with profit/loss data over several months, the script calculates:
 
 - Total number of months in the dataset
@@ -17,12 +17,26 @@ The `budget_analysis.py` script analyzes the financial records of a company. Giv
 - Greatest increase in profits (date and amount)
 - Greatest decrease in losses (date and amount)
 
-![Financial Analysis Image](https://github.com/Xthe23/python-challenge/blob/main/Images/revenue-per-lead.png)
+Below is a snippet of the `budget_analysis.py` file used in this project. For the complete code, please [click here](https://github.com/Xthe23/python-challenge/blob/main/PyBank/budget_analysis.py).
+
+```python
+# PyBank Financial Analysis
+import csv
+import os
+
+# File paths
+input_file = "Resources/budget_data.csv"
+output_file = "Analysis/financial_analysis_output.txt"
+
+# Create the directory if it doesn't exist
+if not os.path.exists("Analysis"):
+    os.makedirs("Analysis")
+```
 
 ---
 
 ## PyPoll Election Results
-
+![Election Analysis Image](https://github.com/Xthe23/python-challenge/blob/main/Images/Vote_counting.png)
 The `election_analysis.py` script assists a small, rural town in modernizing its vote-counting process. Given a dataset with voter IDs, county, and candidate names, the script calculates:
 
 - Total number of votes cast
@@ -31,8 +45,26 @@ The `election_analysis.py` script assists a small, rural town in modernizing its
 - Total number of votes each candidate won
 - Winner of the election based on the popular vote
 
-![Election Analysis Image](https://github.com/Xthe23/python-challenge/blob/main/Images/Vote_counting.png)
+Below is a snippet of the `election_analysis.py` file used in this project. For the complete code, please [click here](https://github.com/Xthe23/python-challenge/blob/main/PyPoll/election_analysis.py).
 
+```python
+# Write the results to terminal and text file
+with open(output_file, 'w') as txtfile:
+    txtfile.write("Election Results\n")
+    txtfile.write("-------------------------\n")
+    txtfile.write(f"Total Votes: {total_votes}\n")
+    txtfile.write("-------------------------\n")
+
+    print("Election Results")
+    print("-------------------------")
+    print(f"Total Votes: {total_votes}")
+    print("-------------------------")
+
+    for candidate, votes in candidates.items():
+        percentage = (votes / total_votes) * 100
+        txtfile.write(f"{candidate}: {percentage:.3f}% ({votes})\n")
+        print(f"{candidate}: {percentage:.3f}% ({votes})")
+```
 ---
 
 ## Running the Scripts
